@@ -1,6 +1,8 @@
 # Description
 
-This repository is meant to serve as a general template for how to set up new repositories in the JogetOSS organization. 
+Datalist Number Formatter is a datalist formatter that transform numerical values similar to [Text Field's Number Formatting](https://dev.joget.org/community/display/DX7/Text+Field#TextField-NumberFormatting).
+
+This plugin is still in **initial design stage**.
 
 # Getting Help
 
