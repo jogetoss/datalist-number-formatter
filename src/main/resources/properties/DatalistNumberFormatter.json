@@ -50,14 +50,6 @@
                 "contol_use_regex":"ture",
                 "options" : [{"value": "true", "label" : ""}
                             ]
-            },
-            {
-                "name" : "storeNumeric",
-                "label" : "@@org.joget.marketplace.DatalistNumberFormatter.storeNumeric@@",
-                "type" : "checkbox",
-                "value": "False",
-                "options" : [{"value": "true", "label" : ""}
-                            ]
             }
             
             
