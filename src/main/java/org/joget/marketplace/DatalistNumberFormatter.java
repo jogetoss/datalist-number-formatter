@@ -7,10 +7,8 @@ import org.joget.apps.datalist.model.DataListColumn;
 import org.joget.apps.datalist.model.DataListColumnFormatDefault;
 import org.joget.commons.util.StringUtil;
 
-
-
 public class DatalistNumberFormatter extends DataListColumnFormatDefault{
-        private final static String MESSAGE_PATH = "messages/DatalistNumberFormatter";
+    private final static String MESSAGE_PATH = "messages/DatalistNumberFormatter";
 
     @Override
     public String getName() {
@@ -37,22 +35,17 @@ public class DatalistNumberFormatter extends DataListColumnFormatDefault{
         return getClass().getName();
     }
         
-        @Override
+    @Override
     public String format(DataList dataList, DataListColumn column, Object row, Object value) {
-                 
-       String num = (String) value;
-       String result ="";
+        String num = (String) value;
+        String result = "";
+        result = StringUtil.numberFormat(num, getPropertyString("style"), getPropertyString("prefix"), getPropertyString("postfix"), "true".equalsIgnoreCase(getPropertyString("useThousandSeparator")), getPropertyString("numOfDecimal"));
 
-     result = StringUtil.numberFormat(num, getPropertyString("style"), getPropertyString("prefix"), getPropertyString("postfix"), "true".equalsIgnoreCase(getPropertyString("useThousandSeparator")), getPropertyString("numOfDecimal"));
-            
-            
-               
-
-    return result;
-}
+        return result;
+   }
+   
     @Override
     public String getPropertyOptions() {
-return AppUtil.readPluginResource(getClass().getName(), "/properties/DatalistNumberFormatter.json", null, true, MESSAGE_PATH);    }
-    
+        return AppUtil.readPluginResource(getClass().getName(), "/properties/DatalistNumberFormatter.json", null, true, MESSAGE_PATH);    
+    }
 }
-
