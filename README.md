@@ -2,8 +2,6 @@
 
 Datalist Number Formatter is a datalist formatter that transform numerical values similar to [Text Field's Number Formatting](https://dev.joget.org/community/display/DX7/Text+Field#TextField-NumberFormatting).
 
-This plugin is still in **initial design stage**.
-
 # Getting Help
 
 JogetOSS is a community-led team for open source software related to the [Joget](https://www.joget.org) no-code/low-code application platform.
