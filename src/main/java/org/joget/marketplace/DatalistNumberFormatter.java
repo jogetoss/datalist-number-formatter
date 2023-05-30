@@ -62,13 +62,13 @@ public class DatalistNumberFormatter extends DataListColumnFormatDefault{
             String key = matcher.group(1);
             Object value = evaluate(row, key);
             if (value != null) {
-                expr = expr.replaceAll(StringUtil.escapeRegex("{"+key+"}"), value.toString());
+                expr = expr.replaceAll(StringUtil.escapeRegex("{"+key+"}"), StringUtil.escapeRegex(value.toString()));
             }
             //try again with c_
             if(value == null && !key.startsWith("c_")){
                 value = evaluate(row, "c_" + key);
                 if (value != null) {
-                    expr = expr.replaceAll(StringUtil.escapeRegex("{"+key+"}"), value.toString());
+                    expr = expr.replaceAll(StringUtil.escapeRegex("{"+key+"}"), StringUtil.escapeRegex(value.toString()));
                 }
             }
         }
